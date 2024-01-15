@@ -13,6 +13,7 @@ Issue:
 const { Builder, until, By } = require("selenium-webdriver");
 const chrome = require("selenium-webdriver/chrome");
 const { brokenImageTest } = require("../index");
+const { Select } = require("selenium-webdriver/lib/select");
 
 describe("Home Page component Test", () => {
   let driver;
@@ -20,7 +21,7 @@ describe("Home Page component Test", () => {
   before(async () => {
     driver = new Builder()
       .forBrowser("chrome")
-      .setChromeOptions(new chrome.Options().headless())
+      // .setChromeOptions(new chrome.Options().headless())
       .build();
 
     await driver.manage().window().setRect({ width: 1920, height: 1080 });
@@ -149,5 +150,51 @@ describe("Home Page component Test", () => {
     } catch (err) {
       throw new Error(err);
     }
+  });
+
+  // case look up test
+  // 2080-04-24
+  // जग्गा मिचि भवन निर्माण
+  // issue: table body is not styled.
+  it("conflict look-up test", async () => {
+    const obj = {
+      select: "जग्गा मिचि भवन निर्माण",
+      date: "2080-04-24",
+    };
+
+    await driver.get("https://demo.ejalas.com/index");
+
+    // first select the type of the type of case
+    const selectElement = await driver.findElement(
+      By.id("inlineFormCustomSelect")
+    );
+
+    const select = new Select(selectElement);
+    select.selectByVisibleText(obj.select);
+
+    // now select the date of register case.
+    await driver
+      .findElement(By.className("nepali-datepicker ndp-nepali-calendar"))
+      .sendKeys(obj.date);
+
+    //submit the detail
+    const submitBtn = await driver.findElement(
+      By.className("common-case-btn section-content-item")
+    );
+
+    await driver.wait(until.elementIsVisible(submitBtn), 10000);
+
+    await driver.executeScript("arguments[0].click();", submitBtn);
+
+    // result will show according to the detail provided
+    // check for the result
+    const targetElement = await driver.findElements(By.css(`tbody tr`));
+
+    // check if the data is present or not it should not be empty
+    console.log(targetElement.length);
+
+    if (targetElement == 0)
+      throw new Error("The search result didn't match for the given input");
+    await driver.sleep(3000);
   });
 });
