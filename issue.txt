@@ -1,0 +1,1 @@
+1. https://demo.ejalas.com/admin/likhit-ujuri -> type=Internal Server Error, status=500
