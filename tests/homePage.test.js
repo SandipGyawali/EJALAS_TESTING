@@ -21,7 +21,7 @@ describe("Home Page component Test", () => {
   before(async () => {
     driver = new Builder()
       .forBrowser("chrome")
-      // .setChromeOptions(new chrome.Options().headless())
+      .setChromeOptions(new chrome.Options().headless())
       .build();
 
     await driver.manage().window().setRect({ width: 1920, height: 1080 });
