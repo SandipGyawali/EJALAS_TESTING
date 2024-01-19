@@ -1,10 +1,14 @@
 const { Builder, By } = require("selenium-webdriver");
 const { login } = require("../index");
+const chrome = require("selenium-webdriver/chrome");
 
 describe("Department", () => {
   let driver;
   before(async () => {
-    driver = new Builder().forBrowser("chrome").build();
+    driver = new Builder()
+      .forBrowser("chrome")
+      .setChromeOptions(new chrome.Options().headless())
+      .build();
   });
 
   after(async () => {
