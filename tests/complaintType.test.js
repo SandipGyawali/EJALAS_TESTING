@@ -23,7 +23,7 @@ describe("Complain-Type Test", () => {
 
   // addition of complain
   // edit of complain
-  it("Add Complaint-Test", async () => {
+  it("Add Complaint-Test 551", async () => {
     try {
       await driver.get("https://demo.ejalas.com/login");
 
@@ -64,7 +64,7 @@ describe("Complain-Type Test", () => {
   });
 
   // edit complain
-  it("Edit Complain-Test", async () => {
+  it("Edit Complain-Test 552", async () => {
     try {
       await driver.get("https://demo.ejalas.com/admin/complaint-type");
 

@@ -37,7 +37,7 @@ describe("Home Page component Test", () => {
   // url endpoint
 
   // news/marquee slide check
-  it("home-page-test", async () => {
+  it("home-page-test 350", async () => {
     try {
       await driver.get("https://demo.ejalas.com/");
 
@@ -69,7 +69,7 @@ describe("Home Page component Test", () => {
   });
 
   // manual fail
-  it("ujuri-case-search-result-fail-test", async () => {
+  it("ujuri-case-search-result-fail-test 351", async () => {
     try {
       await driver.get("https://demo.ejalas.com/tarikh");
 
@@ -98,7 +98,7 @@ describe("Home Page component Test", () => {
   });
 
   // success
-  it("ujuri-case-search-result-success-test", async () => {
+  it("ujuri-case-search-result-success-test 352", async () => {
     try {
       const code = "sfj";
       await driver.get("https://demo.ejalas.com/tarikh");
@@ -130,7 +130,7 @@ describe("Home Page component Test", () => {
   });
 
   // this test ensures if the about-use info is displayed in the page or not
-  it("home-page about-us", async function () {
+  it("home-page about-us 353", async function () {
     try {
       await driver.get("https://demo.ejalas.com/hamro-barema");
 
@@ -156,7 +156,7 @@ describe("Home Page component Test", () => {
   // 2080-04-24
   // जग्गा मिचि भवन निर्माण
   // issue: table body is not styled.
-  it("conflict look-up test", async () => {
+  it("conflict look-up test 354", async () => {
     const obj = {
       select: "जग्गा मिचि भवन निर्माण",
       date: "2080-04-24",

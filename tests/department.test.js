@@ -7,7 +7,7 @@ describe("Department", () => {
   before(async () => {
     driver = new Builder()
       .forBrowser("chrome")
-      .setChromeOptions(new chrome.Options().headless())
+      // .setChromeOptions(new chrome.Options().headless())
       .build();
   });
 
@@ -15,7 +15,7 @@ describe("Department", () => {
     await driver.quit();
   });
 
-  it("add-department-test", async () => {
+  it("add-department-test 401", async () => {
     // login
     await driver.get("https://demo.ejalas.com/login");
 
@@ -43,7 +43,7 @@ describe("Department", () => {
       throw new Error("The input new department is not added");
   });
 
-  it("edit-department existing dept", async () => {
+  it("edit-department existing dept 402", async () => {
     // get the last element of the table body
     const lastElement = await driver.findElement(By.css("tbody tr:last-child"));
 

@@ -18,7 +18,7 @@ describe("user-role", () => {
     await driver.quit();
   });
 
-  it("user-role-add-test", async () => {
+  it("user-role-add-test 201", async () => {
     // first login to the page before starting the test
     await driver.get("https://demo.ejalas.com/login");
 
@@ -50,7 +50,7 @@ describe("user-role", () => {
   });
 
   // edit user role.
-  it("user-role-test-edit", async () => {
+  it("user-role-test-edit 202", async () => {
     await driver.get("https://demo.ejalas.com/admin/role");
 
     // edit the role

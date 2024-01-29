@@ -10,13 +10,6 @@ const data = {
   password: "IETnepal@123",
   navUrl: "https://demo.ejalas.com/admin/dashboard",
 };
-// some time test gives this specific waring but the test case works smoothly in non-headless mode
-// [5620:5176:0109/141404.242:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 2.409 s for first_image_paint 2.311 s
-// [5620:5176:0109/141404.503:ERROR:page_load_metrics_update_dispatcher.cc(179)] Invalid first_paint 2.409 s for first_image_paint 2.311 s
-
-// this uncaught error arises while running the test in headless mode.
-// [0109/150341.602:INFO:CONSOLE(6)] "Uncaught Error: Bootstrap's JavaScript requires jQuery", source: https://demo.ejalas.com/front/js/bootstrap.min.js (6)
-// [0109/150345.085:INFO:CONSOLE(6)] "Uncaught Error: Bootstrap's JavaScript requires jQuery", source: https://demo.ejalas.com/front/js/bootstrap.min.js (6)
 
 describe("Login Test", async function () {
   let driver;
@@ -56,7 +49,7 @@ describe("Login Test", async function () {
   });
 
   // test for successful login
-  it("successful-login", async () => {
+  it("successful-login 1", async () => {
     try {
       await driver.get("https://demo.ejalas.com/login");
 
@@ -77,7 +70,7 @@ describe("Login Test", async function () {
 
   // this test is also validates the error message that is showing error after login
   // intentionally failing test.
-  it("unsuccessful-login", async () => {
+  it("unsuccessful-login 2", async () => {
     try {
       await driver.get("https://demo.ejalas.com/login");
 

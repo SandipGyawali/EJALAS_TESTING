@@ -29,7 +29,7 @@ describe("Judiciary Committee Test", async () => {
     await driver.quit();
   });
 
-  it("Addition of judiciary Committee Test", async () => {
+  it("Addition of judiciary Committee Test 305", async () => {
     try {
       await driver.get("https://demo.ejalas.com/login");
 
@@ -92,7 +92,7 @@ describe("Judiciary Committee Test", async () => {
   });
 
   // edit
-  it("Edit Judicial Committee Test", async () => {
+  it("Edit Judicial Committee Test 306", async () => {
     await driver.get("https://demo.ejalas.com/admin/court");
 
     //click the edit button

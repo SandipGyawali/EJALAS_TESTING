@@ -24,7 +24,7 @@ describe("DashBoard-Test", () => {
     await driver.quit();
   });
 
-  it("dashboard-component test", async () => {
+  it("dashboard-component test 451", async () => {
     try {
       await driver.get("https://demo.ejalas.com/login");
 
@@ -62,7 +62,7 @@ describe("DashBoard-Test", () => {
   });
 
   // case for the dashboard graph
-  it("dashboard-graph test", async () => {
+  it("dashboard-graph test 452", async () => {
     try {
       await driver.get("https://demo.ejalas.com/login");
 

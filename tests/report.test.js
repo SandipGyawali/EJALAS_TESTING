@@ -16,7 +16,7 @@ describe("ward-wise-pratiwedan", () => {
     await driver.quit();
   });
 
-  it("pratiwedan-report-download-test", async () => {
+  it("pratiwedan-report-download-test 103", async () => {
     await driver.get("https://demo.ejalas.com/login");
     // login
     await login(driver);
