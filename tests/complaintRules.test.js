@@ -14,7 +14,7 @@ describe("complaint-related-rules", () => {
     await driver.quit();
   });
 
-  it("addition of complaint rule", async () => {
+  it("addition of complaint rule 601", async () => {
     await driver.get("https://demo.ejalas.com/login");
 
     await login(driver);
