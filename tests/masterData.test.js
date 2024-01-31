@@ -19,7 +19,7 @@ describe("masterData management", () => {
     await driver.quit();
   });
 
-  it("court-type addition", async () => {
+  it("court-type addition 221", async () => {
     await driver.get("https://demo.ejalas.com/login");
 
     await login(driver);
@@ -44,7 +44,7 @@ describe("masterData management", () => {
     expect(inputData).to.equal("demo");
   });
 
-  it("court-type edit", async () => {
+  it("court-type edit 222", async () => {
     // test for the same url end point as mentioned above
     // edit the last element/ latest element in the table
     const lastElement = await driver.findElement(By.css("tbody tr:last-child"));
@@ -74,7 +74,7 @@ describe("masterData management", () => {
     expect(data).to.equal("demo edit");
   });
 
-  it("court-type deletion", async () => {
+  it("court-type deletion 223", async () => {
     // run the program according to the preceding url endpoint
     // select the last element to delete
     const lastElement = await driver.findElement(By.css("tbody tr:last-child"));
