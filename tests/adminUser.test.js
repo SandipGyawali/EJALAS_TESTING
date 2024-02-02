@@ -103,4 +103,25 @@ describe("admin user ", () => {
 
     expect(name).to.equal("test012");
   });
+
+  // submit the input without filling will show error check if the error message is successfully shown or not.
+  // will show only three errors i.e of the name, email and full name field other won't show so not need to check
+  it("check the error message/validator of the admin/user input form", async () => {
+    await driver.get("https://demo.ejalas.com/admin/user");
+
+    // submit
+    await driver.findElement(By.css("button")).click();
+
+    // use loop because the input is in continuous format
+    const inputs = await driver.findElements(By.css(".col-md-3"));
+
+    for (let i = 0; i < 3; i++) {
+      const element = await inputs[i];
+      const errorMsg = await element.findElement(By.css("span")).getText();
+
+      console.log(errorMsg);
+      expect(errorMsg).to.not.be.undefined;
+      expect(errorMsg).to.not.be.equal("");
+    }
+  });
 });
