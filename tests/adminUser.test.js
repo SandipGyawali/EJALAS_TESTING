@@ -106,7 +106,7 @@ describe("admin user ", () => {
 
   // submit the input without filling will show error check if the error message is successfully shown or not.
   // will show only three errors i.e of the name, email and full name field other won't show so not need to check
-  it("check the error message/validator of the admin/user input form", async () => {
+  it("check the error message/validator of the admin/user input form 653", async () => {
     await driver.get("https://demo.ejalas.com/admin/user");
 
     // submit
