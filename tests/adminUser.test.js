@@ -17,7 +17,7 @@ describe("admin user ", () => {
     await driver.quit();
   });
 
-  it("should add the new admin user info", async () => {
+  it("should add the new admin user info 651", async () => {
     await driver.get("https://demo.ejalas.com/login");
 
     await login(driver);
@@ -76,7 +76,7 @@ describe("admin user ", () => {
     }
   });
 
-  it("should edit the user info", async () => {
+  it("should edit the user info 652", async () => {
     // we will change the name and validate if it is editable or not
     // first click on the edit btn of the instance that we want to change
     const lastElement = await driver.findElement(By.css("tbody tr:last-child"));

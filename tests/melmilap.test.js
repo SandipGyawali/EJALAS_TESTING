@@ -18,7 +18,7 @@ describe("Melmilap-Karta", () => {
     await driver.quit();
   });
 
-  it("should add the melmilakarta_name_wada", async () => {
+  it("should add the melmilakarta_name_wada 701", async () => {
     await driver.get("https://demo.ejalas.com/login");
 
     await login(driver);
@@ -51,7 +51,7 @@ describe("Melmilap-Karta", () => {
     expect(wardNumber).to.equal("10");
   });
 
-  it("should edit the latest added name and ward number", async () => {
+  it("should edit the latest added name and ward number 702", async () => {
     // get  the last data that we added and try to edit it's input
     const lastELem = await driver.findElement(By.css("tbody tr:last-child"));
 
@@ -79,7 +79,7 @@ describe("Melmilap-Karta", () => {
     expect(updatedName).to.equal("Jack Sparrow Updated");
   });
 
-  it("should delete the previous updated melmilap_name and ward data", async () => {
+  it("should delete the previous updated melmilap_name and ward data 703", async () => {
     // select the list and click the event delete that is provided
     const element = await driver.findElement(By.css("tbody tr:last-child"));
 
