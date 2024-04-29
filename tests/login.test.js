@@ -6,8 +6,8 @@ const { login } = require("../index");
 
 // validate login info
 const data = {
-  user: "admin",
-  password: "IETnepal@123",
+  user: "****",
+  password: "************",
   navUrl: "https://demo.ejalas.com/admin/dashboard",
 };
 
